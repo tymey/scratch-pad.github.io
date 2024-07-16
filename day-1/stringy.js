@@ -105,7 +105,7 @@ function toDashCase(string) {
     /* The code above can be combined into one line of code: 
     return string.toLowerCase().split(' ').join('-');
     Keeping the lines seperate for readability. */
-    
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -123,16 +123,25 @@ function toDashCase(string) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function receives two strings, the first string will be the one that's checked 
+   and the second string will be a single character.
+O: The function returns a boolean stating whether the first input string begins with the character.
+C: N/A
+E: N/A
 */
 
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-    
+    // Declare array variable
+    var array;
+    // Split string and assign it to array
+    array = string.split('');
+    /* Return the comparison between array[0] being strictly equal to 
+       char.toUpperCase() OR char.toLowerCase() */
+    return array[0] === char.toUpperCase() || array[0] === char.toLowerCase();
+    // If either comparison is true, it will return the boolean value true
+    // If both comparisons are false, it will return the boolean value false
 
     // YOUR CODE ABOVE HERE //
 }
