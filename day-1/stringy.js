@@ -190,16 +190,17 @@ function endsWith(string, char) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function recieves two strings.
+O: The function returns the concatenation of the two strings.
+C: N/A
+E: N/A
 */
 
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    // Return the concatenation of stringOne and stringTwo with + operator
+    return stringOne + stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -216,16 +217,17 @@ function concat(stringOne, stringTwo) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function recieves any number of strings.
+O: The function returns one strings, the joining of all input strings.
+C: N/A
+E: N/A
 */
 
-function join(stringOne, stringTwo) {
+function join(stringOne, stringTwo, ...moreStrings) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    // Return the joining of all of the elements in arg using no space
+    return args.join('');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -241,16 +243,24 @@ function join(stringOne, stringTwo) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function recieves two strings.
+O: The function returns the longest of the two strings.
+C: N/A
+E: N/A
 */
 
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    // Check if the .length of stringOne is greater than stringTwo
+    if (stringOne.length > stringTwo.length) {
+        // If true, return stringOne
+        return stringOne;
+    // Check else if the .length of stringOne is less than stringTwo
+    } else if (stringOne.length < stringTwo.length) {
+        // If true, return stringTwo
+        return stringTwo;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -264,10 +274,12 @@ function longest(stringOne, stringTwo) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function recieves two strings.
+O: The function returns 1 if the first input string is higher in alphabetical order 
+   than the second input string; returns -1 if the second is higher than the first;
+   returns 0 if they're equal.
+C: N/A
+E: N/A
 */
 
 function sortAscending(stringOne, stringTwo) {
