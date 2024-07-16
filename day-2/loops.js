@@ -183,17 +183,24 @@ function getObjectLength(object) {
  */
 
 /* 
-I: 
-O: 
-C: 
-E: 
+I: The function recieves an object.
+O: The function logs the values of the input object in reverse order to the console.
+C: Must use console.log
+E: N/A
 */
 
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   
-  
-  
+  /* The previously created getObjectValues() function returns an array containing the
+     values of the input object in ORDER */
+  // Initialize valueArray with getObjectValues(object)
+  var valueArray = getObjectValues(object);
+  // Declare for loop using i; Start: valueArray.length - 1; Stop(inclusive): 0; Decrement by 1 each loop
+  for (var i = valueArray.length - 1; i >= 0; i--) {
+    // Log valueArray[i] to the console
+    console.log(valueArray[i]);
+  }
   
   // YOUR CODE ABOVE HERE //
 }
