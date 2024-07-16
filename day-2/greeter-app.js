@@ -33,11 +33,34 @@
  *      the exact case.
  */
 
+/* 
+I: The function recieves a number representing the time of the day.
+O: The function logs a string message depending on the time of the day.
+C: The texts are CASE sensitive.
+E: N/A
+*/
+
+
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Check if hour is between (inclusive) 0 and 11
+    if (hour >= 0 && hour <= 11) {
+        // If true, log 'Good Morning'
+        console.log('Good Morning!');
+    // Check else if hour is between (inclusive) 12 and 16
+    } else if (hour >= 12 && hour <= 16) {
+        // If true, log 'Good Afternoon!'
+        console.log('Good Afternoon!');
+    // Check else if hour is between (inclusive) 17 and 21
+    } else if (hour >= 17 && hour <= 21) {
+        // If true, log 'Good Evening!'
+        console.log('Good Evening!');
+    // Check else if hour is between (inclusive) 22 and (exclusive) 24
+    } else if (hour >= 22 && hour < 24) {
+        // If true, log 'Good Night!'
+        console.log('Good Night!');
+    } 
     
     // YOUR CODE ABOVE HERE //
 }
