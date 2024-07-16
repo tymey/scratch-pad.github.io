@@ -282,11 +282,44 @@ C: N/A
 E: N/A
 */
 
+/* Outside of function in order to use for the next 
+   two functions, sortAscending() & sortDescending(). */
+/* Initialize letterValue object assigning each letter of the alphabet, a-z, 
+       with a number 1-26 */
+       var letterValue = {
+        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, l: 12,
+        m: 13, n: 14, o: 15, p: 16, q: 17, r: 18, s: 19, t: 20, u: 21, v: 22, w: 23,
+        x: 24, y: 25, z: 26
+    }
+
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
-
+    // Check if stringOne.toLowerCase() is strictly equal to stringTwo.toLowerCase
+    if (stringOne.toLowerCase() === stringTwo.toLowerCase()) {
+        // If true, return 0
+        return 0;
+    }
+    // Initialize stringArrayOne with stringOne.toLowerCase().split('')
+    var stringArrayOne = stringOne.toLowerCase().split('');
+    // Initialize stringArrayTwo with stringTwo.toLowerCase().split('')
+    var stringArrayTwo = stringTwo.toLowerCase().split('');
+    /* Loop through stringArrayOne and stringArrayTwo and compare the letter 
+    of each string using letterValue object */
+    /* Declare for loop using i; Start: 0; Stop: stringOne.length; 
+    Increment i by 1 each loop */
+    for (var i = 0; i < stringOne.length; i++) {
+        // Check if letterValue[stringArrayOne[i]] < letterValue[stringArrayTwo[i]]
+        if (letterValue[stringArrayOne[i]] < letterValue[stringArrayTwo[i]]) {
+            // If true, return 1
+            return 1;
+        // Check else if letterValue[stringArrayOne[i]] > letterValue[stringArrayTwo[i]]
+        } else if (letterValue[stringArrayOne[i]] > letterValue[stringArrayTwo[i]]) {
+            // If true, return -1
+            return -1;
+        } 
+    }
+ 
     // YOUR CODE ABOVE HERE //
 }
 
@@ -300,17 +333,21 @@ function sortAscending(stringOne, stringTwo) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function recieves two strings.
+O: The function returns 1 if the first input string is lower in alphabetical order 
+   than the second input string; returns -1 if the second is lower than the first;
+   returns 0 if they're equal.
+C: N/A
+E: N/A
 */
 
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
-
+    /* Since sortDescending() should return the opposite value of sortAscending() by 
+       definition, we can use the sortAscending() function within sortDescending() */
+    // Return the opposite value of sortAscending(stringOne, stringTwo)
+    return sortAscending(stringOne, stringTwo) * -1;
 
     // YOUR CODE ABOVE HERE //
 }
