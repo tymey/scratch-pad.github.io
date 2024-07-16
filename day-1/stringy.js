@@ -160,16 +160,25 @@ function beginsWith(string, char) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function receives two strings, the first string will be the one that's checked 
+   and the second string will be a single character.
+O: The function returns a boolean stating whether the first input string ends with the character.
+C: N/A
+E: N/A
 */
 
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-
+    // Declare array variable
+    var array;
+    // Split string and assign it to array
+    array = string.split('');
+    /* Return the comparison between array[array.length - 1] (the last element of array) 
+       being strictly equal to char.toUpperCase() OR char.toLowerCase() */
+    return array[array.length - 1] === char.toUpperCase() || array[array.length - 1] === char.toLowerCase();
+    // If either comparison is true, it will return the boolean value true
+    // If both comparisons are false, it will return the boolean value false
 
     // YOUR CODE ABOVE HERE //
 }
