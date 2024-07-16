@@ -138,17 +138,20 @@ function getObjectValues(object) {
  */
 
 /* 
-I: 
-O: 
-C: 
-E: 
+I: The function recieves an object.
+O: The function logs each value of the input object to the console.
+C: Must use console.log
+E: N/A
 */
 
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
   
-  
-  
+  // Declare for-in loop on object
+  for (var key in object) {
+    // Log object[key] to the console
+    console.log(object[key]);
+  }
   
   // YOUR CODE ABOVE HERE //
 }
