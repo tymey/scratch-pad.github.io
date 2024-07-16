@@ -20,18 +20,27 @@
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: The function recieves a string.
+O: The function returns a new string representing the input string reversed.
+C: N/A
+E: N/A
 */
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     
-    
-    
-    
+    // Initialize reverseArray variable with an empty array
+    var reverseArray = [];
+    // Initialize inputArray variable with input.split('')
+    var inputArray = input.split('');
+    // Declare while loop with the condition that inputArray.length > 0
+    while (inputArray.length > 0) {
+      // Push inputArray.pop() into reverseArray()
+      reverseArray.push(inputArray.pop());
+    }
+    // Return reverseArray.join('')
+    return reverseArray.join('');
+
     // YOUR CODE GOES ABOVE HERE //
 }
 

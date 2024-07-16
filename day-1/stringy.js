@@ -87,7 +87,8 @@ function toUpperCase(string) {
 
 /*
 I: The function recieves a string.
-O: The function returns a new string, which is the input string forced to dash-case.
+O: The function returns a new string, which is the input string forced to lowercase 
+   and dash-case.
 C: N/A
 E: N/A
 */
