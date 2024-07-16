@@ -95,8 +95,17 @@ E: N/A
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
+    // Force the input string to lower case and assign it to the variable newString
+    var newString = string.toLowerCase();
+    /* Split input string into an array by seperating the string 
+    based off of spaces (' ') and assign it to the variable array */
+    var array = newString.split(' ');
+    // Join array with a dash between each element to create a string and return it
+    return array.join('-');
+    /* The code above can be combined into one line of code: 
+    return string.toLowerCase().split(' ').join('-');
+    Keeping the lines seperate for readability. */
     
-
     // YOUR CODE ABOVE HERE //
 }
 
