@@ -110,18 +110,25 @@ function printObjectKeys(object) {
  */
 
 /* 
-I: 
-O: 
-C: 
-E: 
+I: The funciton recieves an object.
+O: The function returns an array containing the object's values.
+C: N/A
+E: N/A
 */
 
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
   
-  
-  
-  
+  // Initialize valueArray with an empty array
+  var valueArray = [];
+  // Declare for-in loop on object
+  for (var key in object) {
+    // Push object[key] into valueArray
+    valueArray.push(object[key]);
+  }
+  // Return valueArray
+  return valueArray;
+
   // YOUR CODE ABOVE HERE //
 }
 
