@@ -19,6 +19,13 @@
  *  d. how do you concatenate Strings? What operator do we use?
  */
 
+/*
+I: 
+O: 
+C: 
+E: 
+*/
+
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     
