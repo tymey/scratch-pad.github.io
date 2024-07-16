@@ -161,17 +161,18 @@ function printObjectValues(object) {
  */
 
 /* 
-I: 
-O: 
-C: 
-E: 
+I: The function recieves an object.
+O: The function returns a number representing the number of key/value pairs within the input object.
+C: N/A
+E: N/A
 */
 
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
   
-  
-  
+  // The previously created getObjectKeys() function returns an array containing all of the keys of object
+  // Return the length of getObjectKeys(object)
+  return getObjectKeys(object).length;
   
   // YOUR CODE ABOVE HERE //
 }
