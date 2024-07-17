@@ -30,14 +30,36 @@ function isArray(value) {
  * TIP: In JavaScript, how can we decipher if a value is an Object, but not 
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
- * 
  */
+
+/**
+ * I: The function recieves a value.
+ * O: The function returns true if the value is an Object intended as a
+ *    collection, false if otherwise.
+ * C: Make sure Array, Null, and Date return false.
+ * E: N/A
+ */
+
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
-
-    
-    
+    // Check if value is an array using Array.isArray(value)
+    if (Array.isArray(value)) {
+        // If true, return false
+        return false;
+    // Check else if value is strictly equal to null
+    } else if (value === null) {
+        // If true, return false
+        return false;
+    // Check else if value is a date using value instanceof Date
+    } else if (value instanceof Date) {
+        // If true, return false
+        return false;
+    // Else, return typeof value === 'object'
+    } else {
+        return typeof value === 'object';
+    }
+        
     // YOUR CODE ABOVE HERE //
 }
 
