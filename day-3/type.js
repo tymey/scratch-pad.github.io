@@ -14,11 +14,20 @@
  * 
  * HINT: There is a method that can help with this.
  */
+
+/**
+ * I: The functions recieves a value.
+ * O: The function returns true if the value is an Array, false if otherwise.
+ * C: N/A
+ * E: N/A
+ */
+
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Use the Array.isArray() method to return a Boolean on whether or not value is an Array
+    // Return Array.isArray(value)
+    return Array.isArray(value);
     
     // YOUR CODE ABOVE HERE //
 }
@@ -71,11 +80,30 @@ function isObject(value) {
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+
+/**
+ * I: The function recieves a value.
+ * O: The function returns true if the input value is either an Array or an Object intended
+ *    as a collection, false if otherwise.
+ * C: Null and Date values should return as false. Array may return true.
+ * E: N/A
+ */
+
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Check if value is a null datatype
+    if (value === null) {
+        // If true, return false
+        return false;
+    // Check else if value is a Date datatype
+    } else if (value instanceof Date) {
+        // If true, return false
+        return false;
+    // Else, return typeof value === 'object'
+    } else {
+        return typeof value === 'object';
+    } 
     
     // YOUR CODE ABOVE HERE //
 }
@@ -99,11 +127,33 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
+
+/**
+ * I: The function recieves a value.
+ * O: The function returns a string representing the datatype of the input value.
+ * C: N/A
+ * E: N/A
+ */
+
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Check if value is an Array datatype
+    if (Array.isArray(value)) {
+        // If true, return 'array'
+        return 'array';
+    // Check else if value is a Null datatype
+    } else if (value === null) {
+        // If true, return 'null'
+        return 'null';
+    // Check else if value is a Date
+    } else if (value instanceof Date) {
+        // If true, return 'date'
+        return 'date';
+    // Else, return typeof value
+    } else {
+        return typeof value;
+    }
     
     // YOUR CODE ABOVE HERE //
 }

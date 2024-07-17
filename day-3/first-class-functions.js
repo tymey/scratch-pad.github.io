@@ -85,7 +85,14 @@ function modifyStrings(strings, modify) {
     // YOUR CODE ABOVE HERE //
 }
 
+// Example uses
+var uppercase = modifyStrings(['tyler', 'ashley'], function(string){
+    return string.toUpperCase();
+}); // ['TYLER', 'ASHLEY']
 
+var addedExclamation = modifyStrings(['alex', 'francis'], function(string){
+    return string + "!";
+}); // ['alex!', 'francis!']
 
 /** 
  * Given an Array of Strings and a Function designed to test the String in some 
@@ -105,6 +112,14 @@ function allStringsPass(strings, test) {
     // YOUR CODE ABOVE HERE //
 }
 
+// Example uses
+var beginsWithA = allStringsPass(['alex', 'aaron'], function(str){
+    return str[0] === 'a';
+}); // true (because all elements begin with 'a')
+
+var fiveOrMoreLetters = allStringsPass(['alex', 'francis', 'aaron'], function(str){
+    return str.length > 4;
+}); // false (because 'alex' does not have five or more letters)
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
