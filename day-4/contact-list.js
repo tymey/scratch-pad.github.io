@@ -76,12 +76,52 @@ function makeContactList() {
     var contacts = [];
     
     return {
-        // we implemented the length api for you //
+        // Create length key with a function value that receives no input
         length: function() {
+            // Return the length of the contacts Array
             return contacts.length;
         },
+        // Create addContact key with a function value that receives an object called contact
         addContact: function(contact) {
+            // Push contact Object into the contacts Array
             contacts.push(contact);
+        },
+        /* Create findContact key with a function value that receives a string representing 
+           a contacts Full Name */
+        findContact: function(fullName) {
+            // Iterate through contacts Array
+            for (var i = 0; i < contacts.length; i++) {
+                /* Check if fullName is strictly equal to 
+                   contacts[i].firstName + ' ' + contacts[i].lastName */
+                if (fullName === contacts[i].nameFirst + ' ' + contacts[i].nameLast) {
+                    // Return contacts[i]
+                    return contacts[i];
+                }
+            }
+        },
+        /* Create removeContact key with a function value that receives an object representing
+           a contact */
+        removeContact: function(contact) {
+            // Iterate through contacts Array
+            for (var i = 0; i < contacts.length; i++) {
+                // Check if contacts[i].id is strictly equal to contact.id
+                if (contacts[i].id === contact.id) {
+                    // If true, delete contacts[i]
+                    contacts.splice(i, 1);
+                }
+            }
+        },
+        // Create printAllContactNames key with function value that receives no input
+        printAllContactNames: function() {
+            // Initialize result variable with contacts[0].nameFirst + ' ' + contacts[0].nameLast
+            var result = contacts[0].nameFirst + ' ' + contacts[0].nameLast;
+            // Declare for loop; Start: 1; Stop: contacts.length; Increment by 1
+            for (var i = 1; i < contacts.length; i++) {
+                // Add and reassign result with '\n' + contacts[i].nameFirst + ' ' + contacts[i].nameLast
+                result += '\n' + contacts[i].nameFirst + ' ' + contacts[i].nameLast;
+            }
+            // Return the string result
+            return result;
         }
     }
 }
