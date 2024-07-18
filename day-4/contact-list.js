@@ -33,11 +33,41 @@
  *          new-line character added after it!
  */
 
+/**
+ * I: The function receives a number representing an id and two strings representing
+ *    the first and last name.
+ * O: The function returns an object representing a contact.
+ * C: N/A
+ * E: N/A
+ */
+
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    // Return an object with key/value pairs for id, nameFirst, & nameLast
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    };
 } 
 
+/**
+ * I: The function does not receive any input.
+ * O: The function returns an object and it will be loaded with several methods including:
+ *    - length(): returns the number of contacts within the list.
+ *    - addContact(contact): takes a contact object to be added to the 
+ *      contact-list.
+ *    - findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
+ *      returns the contact object if found in the contacts-list, or, 
+ *      undefined if the fullName does not match any contacts in the list.
+ *    - removeContact(contact): takes a contact object to be removed from 
+ *      the contact-list. (Hint: use splice method)
+ *    - add a printAllContactNames() Function to your makeContactList() factory. The 
+ *      printAllContactNames() Function should return a String formated with all the 
+ *      full-names of the separated with a line-break.
+ * C: N/A
+ * E: N/A
+ */
 
 function makeContactList() {
     /*
