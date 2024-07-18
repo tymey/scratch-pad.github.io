@@ -13,16 +13,21 @@
  */
 
 /** 
- * I: The function 
- * O: 
- * C: 
- * E: 
+ * I: The function recieves a number or a string to act as a base to test against.
+ * O: The function returns a function that tests whether a given value is greater than
+ *    the base.
+ * C: N/A
+ * E: N/A
 */
 
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-   
+    // Return a function that recieves a value
+    return function(value) {
+        // Return the comparison value > base
+        return Number(value) > Number(base);
+    };
     
     // YOUR CODE ABOVE HERE //
 }
@@ -32,11 +37,23 @@ function createGreaterThanFilter(base) {
  * return a Function that tests whether a given value is less than the 
  * base. (test means return true or false)
  */
+
+/** 
+ * I: The function recieves a number or a string to act as a base to test against.
+ * O: The function returns a function that tests whether a given value is less than
+ *    the base.
+ * C: N/A
+ * E: N/A
+*/
+
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-   
-    
+    // Return a function that recieves a value
+    return function(value) {
+        // Return the comparison value < base
+        return Number(value) > Number(base);
+    };
     
     // YOUR CODE ABOVE HERE //
 }
@@ -46,11 +63,24 @@ function createLessThanFilter(base) {
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
+
+/**
+ * I: 
+ * O:
+ * C: 
+ * E: 
+ */
+
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Return a function that recieves a string
+    return function(string) {
+        // Create an array of the letters of string all lowercase
+        var array = string.toLowerCase().split('');
+        // Return the comparison of array[0] strictly equal to startsWith
+        return array[0] === startsWith;
+    };
     
     // YOUR CODE ABOVE HERE //
 }
