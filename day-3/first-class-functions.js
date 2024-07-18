@@ -13,7 +13,7 @@
  */
 
 /** 
- * I: The function recieves a number or a string to act as a base to test against.
+ * I: The function receives a number or a string to act as a base to test against.
  * O: The function returns a function that tests whether a given value is greater than
  *    the base.
  * C: N/A
@@ -22,11 +22,11 @@
 
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    console.log(base);
     // Return a function that recieves a value
     return function(value) {
         // Return the comparison value > base
-        return Number(value) > Number(base);
+        return value > base;
     };
     
     // YOUR CODE ABOVE HERE //
@@ -39,7 +39,7 @@ function createGreaterThanFilter(base) {
  */
 
 /** 
- * I: The function recieves a number or a string to act as a base to test against.
+ * I: The function receives a number or a string to act as a base to test against.
  * O: The function returns a function that tests whether a given value is less than
  *    the base.
  * C: N/A
@@ -52,7 +52,7 @@ function createLessThanFilter(base) {
     // Return a function that recieves a value
     return function(value) {
         // Return the comparison value < base
-        return Number(value) > Number(base);
+        return value < base;
     };
     
     // YOUR CODE ABOVE HERE //
@@ -73,11 +73,11 @@ function createLessThanFilter(base) {
 
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+
     // Return a function that recieves a string
     return function(string) {
         // Create an array of the letters of string all lowercase
-        var array = string.toLowerCase().split('');
+        var array = string.split('');
         // Return the comparison of array[0] strictly equal to startsWith
         return array[0] === startsWith;
     };
