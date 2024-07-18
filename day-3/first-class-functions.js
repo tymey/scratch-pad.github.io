@@ -22,7 +22,7 @@
 
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    console.log(base);
+
     // Return a function that recieves a value
     return function(value) {
         // Return the comparison value > base
@@ -65,21 +65,23 @@ function createLessThanFilter(base) {
  */
 
 /**
- * I: 
- * O:
- * C: 
- * E: 
+ * I: The function receives a string that is a single character.
+ * O: The function returns a function that tests whether a given string starts
+ *    with the single character.
+ * C: N/A
+ * E: N/A
  */
 
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-
+    
     // Return a function that recieves a string
     return function(string) {
         // Create an array of the letters of string all lowercase
-        var array = string.split('');
-        // Return the comparison of array[0] strictly equal to startsWith
-        return array[0] === startsWith;
+        var array = string.toLowerCase().split('');
+        // Return the comparison of array[0] strictly equal to startsWith.toLowerCase()
+        return array[0] === startsWith.toLowerCase();
+
     };
     
     // YOUR CODE ABOVE HERE //
@@ -90,11 +92,26 @@ function createStartsWithFilter(startsWith) {
  * Function that tests whether a given String ends with the endsWith 
  * character.
  */
+
+/**
+ * I: The function receives a string that is a single character.
+ * O: The function returns a function that tests whether a given string ends
+ *    with the single character.
+ * C: N/A
+ * E: N/A
+ */
+
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Return a function that recieves a string
+    return function(string) {
+        // Create an array of the letters of string all lowercase
+        var array = string.toLowerCase().split('');
+        /*  Return the comparison of array[array.length - 1] strictly equal 
+            to endsWith.toLowerCase() */
+        return array[array.length - 1] === endsWith.toLowerCase();    
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -106,11 +123,28 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
+
+/**
+ * I: The function recieves an array of strings and a function designed to 
+ *    modify a String.
+ * O: The function returns the input array of strings modified with the input
+ *    function.
+ * C: N/A
+ * E: N/A
+ */
+
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Initialize result with an empty array
+    var result = [];
+    // Iterate through the input array
+    for (var i = 0; i < strings.length; i++) {
+        // Perform modify function on strings[i] and push into result
+        result.push(modify(strings[i]));
+    }
+    // Return result
+    return result;
     
     // YOUR CODE ABOVE HERE //
 }
@@ -133,11 +167,28 @@ var addedExclamation = modifyStrings(['alex', 'francis'], function(string){
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
+
+/**
+ * I: The function receives an array of strings and a function designed to test a 
+ *    string in some way and return a Boolean on whether it passed.
+ * O: The function returns true if ALL strings pass the test and false otherwise.
+ * C: N/A
+ * E: N/A
+ */
+
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    // Iterate through strings array
+    for (var i = 0; i < strings.length; i++) {
+        // Check if strings[i] doesn't pass the test given by the test function
+        if (test(strings[i]) === false) {
+            // If true, return false.
+            return false;
+        }
+    }
+    // Return true
+    return true;
     
     // YOUR CODE ABOVE HERE //
 }

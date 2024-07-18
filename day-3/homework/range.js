@@ -21,11 +21,42 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+
+/**
+ * I: The function receives two integers.
+ * O: The function returns an array containing all integers between the two parameters,
+ *    inclusively. If the first argument is greater than the second, the function returns
+ *    the range in reverse order.
+ * C: Use the push() method of Array.
+ * E: N/A
+ */
+
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
-    
-    
+    // Initialize result with an empty array
+    var result = [];
+    // Check if start < end
+    if (start < end) {
+        // If true, declare while loop; Stop: start <= end
+        while (start <= end) {
+            // Push start into result
+            result.push(start);
+            // Increment start
+            start++;
+        }
+    // Check if else start > end
+    } else if (start > end) {
+        // If true, declare while loop; Stop: start >= end
+        while (start >= end) {
+            // Push start into result
+            result.push(start);
+            // Decrement start
+            start--;
+        }
+    }
+    // Return result
+    return result;
     
     // YOUR CODE GOES ABOVE HERE //
 }
